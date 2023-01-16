@@ -4,7 +4,13 @@
 <div align=center><img width="320" height="320" src="https://s2.loli.net/2023/01/16/7b4TJpn1tYP8sej.png"/></div>
 
 
-<div align=center><p>一款为芳文党服务的胡桃同学！</p></div>
+<div align=center>
+
+<p><strong>一款为芳文党服务的胡桃同学！</strong></p>
+
+<img src="https://img.shields.io/badge/OneBot-11-black?style=for-the-badge"></img> <img src="https://img.shields.io/github/license/misaka10843/AoBot?style=for-the-badge"></img> <img src="https://img.shields.io/badge/python-3.8+-blue?style=for-the-badge"></img>
+
+</div>
 
 # 🤖AoBot
 
@@ -51,14 +57,29 @@
 
 如果您是`git clone`，请允许`cd AoBot`
 
-然后打开`.env`，配置以下内容
+然后新建`.env`文件，配置以下内容
 
 ```.env
+# 此处无需更改
+DRIVER=~httpx+~websockets
+# 如果您的go-cqhttp不是在本机运行，请将127.0.0.1更改为对应的IP
+ONEBOT_WS_URLS=["ws://127.0.0.1:6700"]
 
 SUPERUSERS = ["机器人管理员qq"] #超级管理员
 
 # bilibili URL解析插件设置
 analysis_whitelist = [qq号,qq号] # 不解析里面填写的QQ号发的链接 List[int]
 analysis_group_whitelist = [群号,群号] # 不解析里面填写的QQ群号发的链接 List[int]
-
 ```
+
+### 3.启动对应端
+
+首先，我们启动**go-cqhttp**
+
+切换到go-cqhttp的文件夹，输入`./go-cqhttp`，然后将进程挂起即可
+
+(Linux可以使用`Screen`来进行挂起)
+
+然后，我们启动**AoBot**
+
+**请注意，在进行接下来的过程前，请注意您的python必须大于等于3.8**
