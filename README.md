@@ -4,7 +4,7 @@
 
 <p><strong>一款为芳文党服务的胡桃同学！</strong></p>
 
-`<img src="https://img.shields.io/badge/OneBot-11-black?style=for-the-badge"></img>` `<img src="https://img.shields.io/github/license/misaka10843/AoBot?style=for-the-badge"></img>` `<img src="https://img.shields.io/badge/python-3.8+-blue?style=for-the-badge"></img>`
+<img src="https://img.shields.io/badge/OneBot-11-black?style=for-the-badge"></img> <img src="https://img.shields.io/github/license/misaka10843/AoBot?style=for-the-badge"></img> <img src="https://img.shields.io/badge/python-3.8+-blue?style=for-the-badge"></img>
 
 </div>
 
@@ -85,3 +85,13 @@ analysis_group_whitelist = [群号,群号] # 不解析里面填写的QQ群号发
 首先，切换到AoBot文件夹，然后输入 `pip install -r ./requirements.txt`来安装依赖
 
 然后输入 `python bot.py`来启动Bot后，挂起进程即可
+
+## 🔗引用插件
+
+- [bilibili视频、番剧解析](https://github.com/mengshouer/nonebot_plugin_analysis_bilibili)
+- [HarukaBot(bili动态)](https://github.com/SK-415/HarukaBot)
+- [HikariSearch](https://github.com/MeetWq/nonebot-plugin-hikarisearch)
+- [无数据库的问答插件](https://github.com/kexue-z/nonebot-plugin-word-bank2)
+- [nonebot-twitter(并未测试)](https://github.com/SlieFamily/nonebot-twitter)
+
+其他未列出的插件因为并未做出修改，所以您可以直接在`plugins.json`中查看

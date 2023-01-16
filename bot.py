@@ -4,7 +4,7 @@
 import nonebot
 from nonebot.adapters.onebot.v11 import Adapter
 
-
+nonebot.load_from_toml("pyproject.toml")
 nonebot.init(_env_file=".env")
 
 driver = nonebot.get_driver()
