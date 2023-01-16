@@ -1,14 +1,10 @@
-
-
-
 <div align=center><img width="320" height="320" src="https://s2.loli.net/2023/01/16/7b4TJpn1tYP8sej.png"/></div>
-
 
 <div align=center>
 
 <p><strong>一款为芳文党服务的胡桃同学！</strong></p>
 
-<img src="https://img.shields.io/badge/OneBot-11-black?style=for-the-badge"></img> <img src="https://img.shields.io/github/license/misaka10843/AoBot?style=for-the-badge"></img> <img src="https://img.shields.io/badge/python-3.8+-blue?style=for-the-badge"></img>
+`<img src="https://img.shields.io/badge/OneBot-11-black?style=for-the-badge"></img>` `<img src="https://img.shields.io/github/license/misaka10843/AoBot?style=for-the-badge"></img>` `<img src="https://img.shields.io/badge/python-3.8+-blue?style=for-the-badge"></img>`
 
 </div>
 
@@ -36,9 +32,9 @@
 
 ### 1.配置gocq
 
-在 [go-cqhttp仓库](https://github.com/Mrs4s/go-cqhttp) 下载Releases最新版本，运行后选择反向WS/正向WS，然后打开go-cqhttp生成的`config.yml`在对应地方填写`0.0.0.0:6700`
+在 [go-cqhttp仓库](https://github.com/Mrs4s/go-cqhttp) 下载Releases最新版本，运行后选择反向WS/正向WS，然后打开go-cqhttp生成的 `config.yml`在对应地方填写 `0.0.0.0:6700`
 
-例如选择正向WS，go-cqhttp生成的`config.yml`中对应的地方填写应该这样
+例如选择正向WS，go-cqhttp生成的 `config.yml`中对应的地方填写应该这样
 
 ```yml
   # 正向WS设置
@@ -51,13 +47,13 @@
 
 ### 2.配置AoBot
 
-首先先获取本仓库文档，您可以下载[zip](https://github.com/misaka10843/AoBot/archive/refs/heads/main.zip)或者`git clone https://github.com/misaka10843/AoBot.git`
+首先先获取本仓库文档，您可以下载[zip](https://github.com/misaka10843/AoBot/archive/refs/heads/main.zip)或者 `git clone https://github.com/misaka10843/AoBot.git`
 
-如果您是下载的`zip`，请解压后`cd AoBot-main`
+如果您是下载的 `zip`，请解压后 `cd AoBot-main`
 
-如果您是`git clone`，请允许`cd AoBot`
+如果您是 `git clone`，请允许 `cd AoBot`
 
-然后新建`.env`文件，配置以下内容
+然后新建 `.env`文件，配置以下内容
 
 ```.env
 # 此处无需更改
@@ -76,10 +72,16 @@ analysis_group_whitelist = [群号,群号] # 不解析里面填写的QQ群号发
 
 首先，我们启动**go-cqhttp**
 
-切换到go-cqhttp的文件夹，输入`./go-cqhttp`，然后将进程挂起即可
+切换到go-cqhttp的文件夹，输入 `./go-cqhttp`，然后将进程挂起即可
 
-(Linux可以使用`Screen`来进行挂起)
+(Linux可以使用 `Screen`来进行挂起)
 
 然后，我们启动**AoBot**
 
 **请注意，在进行接下来的过程前，请注意您的python必须大于等于3.8**
+
+强烈建议您使用[虚拟环境](https://docs.python.org/zh-cn/3/library/venv.html)安装依赖和运行，不会创建虚拟环境可以去看 [virtualenv 文档](https://virtualenv.pypa.io/en/latest/index.html)，看不懂英语的可以去看[廖雪峰教程](https://www.liaoxuefeng.com/wiki/1016959663602400/1019273143120480)
+
+首先，切换到AoBot文件夹，然后输入 `pip install -r ./requirements.txt`来安装依赖
+
+然后输入 `python bot.py`来启动Bot后，挂起进程即可
