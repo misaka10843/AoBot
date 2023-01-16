@@ -1,6 +1,7 @@
 {
   "plugins": [
-    "nonebot_plugin_manager"
+    "nonebot_plugin_manager",
+    "haruka_bot"
   ],
   "plugin_dirs": [
       "aobot/plugins"

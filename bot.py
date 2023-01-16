@@ -13,7 +13,6 @@ driver.register_adapter(Adapter)
 
 # nonebot.load_builtin_plugins()
 nonebot.load_from_json("plugins.json", encoding="utf-8")
-# app = nonebot.get_asgi()
 
 
 if __name__ == "__main__":
