@@ -1,7 +1,7 @@
 
 
 
-<div align=center><img width="320" height="320" src="https://s2.loli.net/2023/01/16/h2rKJ8smjnlxaMO.webp"/></div>
+<div align=center><img width="320" height="320" src="https://s2.loli.net/2023/01/16/7b4TJpn1tYP8sej.png"/></div>
 
 
 <div align=center><p>一款为芳文党服务的胡桃同学！</p></div>
