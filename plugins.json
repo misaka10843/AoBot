@@ -1,0 +1,8 @@
+{
+  "plugins": [
+    "nonebot_plugin_manager"
+  ],
+  "plugin_dirs": [
+      "aobot/plugins"
+  ]
+}
