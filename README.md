@@ -4,7 +4,7 @@
 
 <p><strong>一款为芳文党服务的胡桃同学！</strong></p>
 
-<img src="https://img.shields.io/badge/OneBot-11-black?style=for-the-badge"></img> <img src="https://img.shields.io/github/license/misaka10843/AoBot?style=for-the-badge"></img> <img src="https://img.shields.io/badge/python-3.8+-blue?style=for-the-badge"></img>
+`<img src="https://img.shields.io/badge/OneBot-11-black?style=for-the-badge"></img>` `<img src="https://img.shields.io/github/license/misaka10843/AoBot?style=for-the-badge"></img>` `<img src="https://img.shields.io/badge/python-3.8+-blue?style=for-the-badge"></img>`
 
 </div>
 
@@ -59,19 +59,17 @@
 
 如果您是 `git clone`，请允许 `cd AoBot`
 
-然后新建 `.env`文件，配置以下内容
+然后新建 `.env`文件，将 `.env.dev`的内容复制到 `.env`后按照对应的注解进行配置
+
+请注意，默认情况下，请不要修改以下的内容，如需修改，请连同修改go-cqhttp的 `config.yml`中的反向WS地址
 
 ```.env
-# 此处无需更改
-DRIVER=~httpx+~websockets
-# 如果您的go-cqhttp不是在本机运行，请将127.0.0.1更改为对应的IP
-ONEBOT_WS_URLS=["ws://127.0.0.1:6700"]
+################
+#ws配置
+################
 
-SUPERUSERS = ["机器人管理员qq"] #超级管理员
-
-# bilibili URL解析插件设置
-analysis_whitelist = [qq号,qq号] # 不解析里面填写的QQ号发的链接 List[int]
-analysis_group_whitelist = [群号,群号] # 不解析里面填写的QQ群号发的链接 List[int]
+HOST=127.0.0.1
+PORT=8531
 ```
 
 ### 3.启动对应端
@@ -99,8 +97,9 @@ analysis_group_whitelist = [群号,群号] # 不解析里面填写的QQ群号发
 - [HikariSearch](https://github.com/MeetWq/nonebot-plugin-hikarisearch)
 - [无数据库的问答插件](https://github.com/kexue-z/nonebot-plugin-word-bank2)
 - [nonebot-twitter(并未测试)](https://github.com/SlieFamily/nonebot-twitter)
+- [ELF_RSS(Twitter及其他RSS源的转发动态)](https://github.com/Quan666/ELF_RSS)
 
-其他未列出的插件因为并未做出修改，所以您可以直接在`plugins.json`中查看
+其他未列出的插件因为并未做出修改，所以您可以直接在 `plugins.json`中查看
 
 ## ❓常见问题
 
