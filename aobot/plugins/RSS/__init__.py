@@ -38,15 +38,9 @@ async def start(bot: Bot) -> None:
     if not DATA_PATH.is_dir():
         DATA_PATH.mkdir()
 
-    boot_message = (
-        f"Version: v{VERSION}\nAuthor：Quan666\nhttps://github.com/Quan666/ELF_RSS"
-    )
-
     rss_list = Rss.read_rss()  # 读取list
     if not rss_list:
-        await send_message_to_admin(f"第一次启动，你还没有订阅，记得添加哟！\n{boot_message}", bot)
         logger.info("第一次启动，你还没有订阅，记得添加哟！")
-    await send_message_to_admin(f"ELF_RSS 订阅器启动成功！\n{boot_message}", bot)
-    logger.info("ELF_RSS 订阅器启动成功！")
+    logger.success("ELF_RSS 订阅器启动成功！")
     # 创建检查更新任务
     await asyncio.gather(*[tr.add_job(rss) for rss in rss_list if not rss.stop])

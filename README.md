@@ -1,18 +1,34 @@
-<div align=center><img width="320" height="320" src="https://s2.loli.net/2023/01/16/7b4TJpn1tYP8sej.png"/></div>
+<!-- markdownlint-disable MD033 MD041 -->
+<p align="center">
+  <div align=center><img width="320" height="320" src="https://s2.loli.net/2023/01/16/7b4TJpn1tYP8sej.png"/></div>
+</p>
 
-<div align=center>
+<div align="center">
 
-<p><strong>一款为芳文党服务的胡桃同学！</strong></p>
+# AoBot
 
-`<img src="https://img.shields.io/badge/OneBot-11-black?style=for-the-badge"></img>` `<img src="https://img.shields.io/github/license/misaka10843/AoBot?style=for-the-badge"></img>` `<img src="https://img.shields.io/badge/python-3.8+-blue?style=for-the-badge"></img>`
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable-next-line MD036 -->
+_✨ 一款为芳文党服务的胡桃同学！ ✨_
+<!-- prettier-ignore-end -->
 
 </div>
 
-# 🤖AoBot
+<div align=center>
+  <img src="https://img.shields.io/badge/OneBot-11-black?style=for-the-badge"></img>
+  <img src="https://img.shields.io/github/license/misaka10843/AoBot?style=for-the-badge"></img>
+  <img src="https://img.shields.io/badge/python-3.8+-blue?style=for-the-badge"></img>
+</div>
 
-此项目基于 Nonebot2 和 go-cqhttp 开发，一款有一些插件的QQ群娱乐机器人
+<hr>
 
-（此项目定位为个人Bot，可能不会进行长期维护！）
+<div align=center>
+
+此项目基于 [Nonebot2](https://github.com/nonebot/nonebot2) 和 [go-cqhttp](https://github.com/Mrs4s/go-cqhttp) 开发，一款有一些插件的QQ群娱乐机器人
+
+（此项目定位为个人Bot，可能不会进行长期维护/进行错误修复！）
+
+</div>
 
 ## 💭About
 
