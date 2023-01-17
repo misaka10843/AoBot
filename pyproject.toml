@@ -1,7 +1,7 @@
 [project]
-name = "AoBot"
+name = "KurumiBot"
 version = "0.1.0"
-description = "AoBot"
+description = "KurumiBot"
 readme = "README.md"
 requires-python = "^3.8"
 
@@ -10,6 +10,6 @@ adapters = [
     { name = "OneBot V11", module_name = "nonebot.adapters.onebot.v11" }
 ]
 # plugins = ["nonebot_plugin_manager"]
-# plugin_dirs = ["aobot/plugins"]
+# plugin_dirs = ["KurumiBot/plugins"]
 builtin_plugins = []
 plugins = ["haruka_bot"]

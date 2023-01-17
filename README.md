@@ -5,7 +5,7 @@
 
 <div align="center">
 
-# AoBot
+# KurumiBot
 
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable-next-line MD036 -->
@@ -16,7 +16,7 @@ _✨ 一款为芳文党服务的胡桃同学！ ✨_
 
 <div align=center>
   <img src="https://img.shields.io/badge/OneBot-11-black?style=for-the-badge"></img>
-  <img src="https://img.shields.io/github/license/misaka10843/AoBot?style=for-the-badge"></img>
+  <img src="https://img.shields.io/github/license/misaka10843/KurumiBot?style=for-the-badge"></img>
   <img src="https://img.shields.io/badge/python-3.8+-blue?style=for-the-badge"></img>
 </div>
 
@@ -32,7 +32,7 @@ _✨ 一款为芳文党服务的胡桃同学！ ✨_
 
 ## 💭About
 
-用爱发电，某些功能学习借鉴了大佬们的代码，并且引用了一些插件后进行个性化的修改，因为本人为胡桃同学力推人因此开发了Aobot，实现了一些对群友的娱乐功能/实用功能/芳文社相关功能（大概）。
+用爱发电，某些功能学习借鉴了大佬们的代码，并且引用了一些插件后进行个性化的修改，因为本人为胡桃同学力推人因此开发了KurumiBot，实现了一些对群友的娱乐功能/实用功能/芳文社相关功能（大概）。
 
 ## 🔨功能图
 
@@ -67,13 +67,13 @@ _✨ 一款为芳文党服务的胡桃同学！ ✨_
         <<: *default # 引用默认中间件
 ```
 
-### 2.配置AoBot
+### 2.配置KurumiBot
 
-首先先获取本仓库文档，您可以下载[zip](https://github.com/misaka10843/AoBot/archive/refs/heads/main.zip)或者 `git clone https://github.com/misaka10843/AoBot.git`
+首先先获取本仓库文档，您可以下载[zip](https://github.com/misaka10843/KurumiBot/archive/refs/heads/main.zip)或者 `git clone https://github.com/misaka10843/KurumiBot.git`
 
-如果您是下载的 `zip`，请解压后 `cd AoBot-main`
+如果您是下载的 `zip`，请解压后 `cd KurumiBot-main`
 
-如果您是 `git clone`，请允许 `cd AoBot`
+如果您是 `git clone`，请允许 `cd KurumiBot`
 
 然后新建 `.env`文件，将 `.env.dev`的内容复制到 `.env`后按照对应的注解进行配置
 
@@ -96,13 +96,13 @@ PORT=8531
 
 (Linux可以使用 `Screen`来进行挂起)
 
-然后，我们启动**AoBot**
+然后，我们启动**KurumiBot**
 
 **请注意，在进行接下来的过程前，请注意您的python必须大于等于3.8**
 
 强烈建议您使用[虚拟环境](https://docs.python.org/zh-cn/3/library/venv.html)安装依赖和运行，不会创建虚拟环境可以去看 [virtualenv 文档](https://virtualenv.pypa.io/en/latest/index.html)，看不懂英语的可以去看[廖雪峰教程](https://www.liaoxuefeng.com/wiki/1016959663602400/1019273143120480)
 
-首先，切换到AoBot文件夹，然后输入 `pip install -r ./requirements.txt`来安装依赖
+首先，切换到KurumiBot文件夹，然后输入 `pip install -r ./requirements.txt`来安装依赖
 
 然后输入 `python bot.py`来启动Bot后，挂起进程即可
 
@@ -138,13 +138,13 @@ W2:`data\word_bank\bank.json`
 Traceback (most recent call last):
   File "bot.py", line 19, in <module>
     nonebot.run()
-  File "D:\Users\misaka10843\Documents\GitHub\AoBot\.venv\lib\site-packages\nonebot\__init__.py", line 273, in run
+  File "D:\Users\misaka10843\Documents\GitHub\KurumiBot\.venv\lib\site-packages\nonebot\__init__.py", line 273, in run
     get_driver().run(*args, **kwargs)
-  File "D:\Users\misaka10843\Documents\GitHub\AoBot\.venv\lib\site-packages\nonebot\drivers\fastapi.py", line 172, in run
+  File "D:\Users\misaka10843\Documents\GitHub\KurumiBot\.venv\lib\site-packages\nonebot\drivers\fastapi.py", line 172, in run
     uvicorn.run(
-  File "D:\Users\misaka10843\Documents\GitHub\AoBot\.venv\lib\site-packages\uvicorn\main.py", line 569, in run
+  File "D:\Users\misaka10843\Documents\GitHub\KurumiBot\.venv\lib\site-packages\uvicorn\main.py", line 569, in run
     server.run()
-  File "D:\Users\misaka10843\Documents\GitHub\AoBot\.venv\lib\site-packages\uvicorn\server.py", line 60, in run
+  File "D:\Users\misaka10843\Documents\GitHub\KurumiBot\.venv\lib\site-packages\uvicorn\server.py", line 60, in run
     return asyncio.run(self.serve(sockets=sockets))
   File "d:\pl\python\python38\lib\asyncio\runners.py", line 44, in run
     return loop.run_until_complete(main)
@@ -158,16 +158,16 @@ Traceback (most recent call last):
     handle._run()
   File "d:\pl\python\python38\lib\asyncio\events.py", line 81, in _run
     self._context.run(self._callback, *self._args)
-> File "D:\Users\misaka10843\Documents\GitHub\AoBot\.venv\lib\site-packages\apscheduler\executors\base_py3.py", line 30, in run_coroutine_job
+> File "D:\Users\misaka10843\Documents\GitHub\KurumiBot\.venv\lib\site-packages\apscheduler\executors\base_py3.py", line 30, in run_coroutine_job
     retval = await job.func(*job.args, **job.kwargs)
-  File "D:\Users\misaka10843\Documents\GitHub\AoBot\.venv\lib\site-packages\haruka_bot\plugins\pusher\dynamic_pusher.py", line 38, in dy_sched
+  File "D:\Users\misaka10843\Documents\GitHub\KurumiBot\.venv\lib\site-packages\haruka_bot\plugins\pusher\dynamic_pusher.py", line 38, in dy_sched
     await grpc_get_user_dynamics(
-  File "D:\Users\misaka10843\Documents\GitHub\AoBot\.venv\lib\site-packages\bilireq\grpc\utils\__init__.py", line 48, in
+  File "D:\Users\misaka10843\Documents\GitHub\KurumiBot\.venv\lib\site-packages\bilireq\grpc\utils\__init__.py", line 48, in
  wrapper
     result = await func(
-  File "D:\Users\misaka10843\Documents\GitHub\AoBot\.venv\lib\site-packages\bilireq\grpc\dynamic\__init__.py", line 20, in grpc_get_user_dynamics
+  File "D:\Users\misaka10843\Documents\GitHub\KurumiBot\.venv\lib\site-packages\bilireq\grpc\dynamic\__init__.py", line 20, in grpc_get_user_dynamics
     return await stub.DynSpace(req, **kwargs)
-  File "D:\Users\misaka10843\Documents\GitHub\AoBot\.venv\lib\site-packages\grpc\aio\_call.py", line 271, in __await__
+  File "D:\Users\misaka10843\Documents\GitHub\KurumiBot\.venv\lib\site-packages\grpc\aio\_call.py", line 271, in __await__
     response = yield from self._call_response
 asyncio.exceptions.CancelledError
 01-17 12:57:10 [INFO] uvicorn | Application shutdown complete.

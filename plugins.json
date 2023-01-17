@@ -4,6 +4,6 @@
     "haruka_bot"
   ],
   "plugin_dirs": [
-      "aobot/plugins"
+      "KurumiBot/plugins"
   ]
 }
