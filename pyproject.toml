@@ -12,3 +12,4 @@ adapters = [
 # plugins = ["nonebot_plugin_manager"]
 # plugin_dirs = ["aobot/plugins"]
 builtin_plugins = []
+plugins = ["haruka_bot"]

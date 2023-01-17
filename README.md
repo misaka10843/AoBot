@@ -32,15 +32,21 @@
 
 ### 1.配置gocq
 
-在 [go-cqhttp仓库](https://github.com/Mrs4s/go-cqhttp) 下载Releases最新版本，运行后选择反向WS/正向WS，然后打开go-cqhttp生成的 `config.yml`在对应地方填写 `0.0.0.0:6700`
+在 [go-cqhttp仓库](https://github.com/Mrs4s/go-cqhttp) 下载Releases最新版本，运行后选择反向WS，然后打开go-cqhttp生成的 `config.yml`在对应地方填写 `ws://127.0.0.1:8531/onebot/v11/ws`
 
-例如选择正向WS，go-cqhttp生成的 `config.yml`中对应的地方填写应该这样
+比如go-cqhttp生成的 `config.yml`中对应的地方填写应该这样
 
 ```yml
-  # 正向WS设置
-  - ws:
-      # 正向WS服务器监听地址
-      address: 0.0.0.0:6700
+  - ws-reverse:
+      # 反向WS Universal 地址
+      # 注意 设置了此项地址后下面两项将会被忽略
+      universal: ws://127.0.0.1:8531/onebot/v11/ws #这里需要更改！
+      # 反向WS API 地址
+      api: ws://your_websocket_api.server
+      # 反向WS Event 地址
+      event: ws://your_websocket_event.server
+      # 重连间隔 单位毫秒
+      reconnect-interval: 3000
       middlewares:
         <<: *default # 引用默认中间件
 ```
@@ -95,3 +101,50 @@ analysis_group_whitelist = [群号,群号] # 不解析里面填写的QQ群号发
 - [nonebot-twitter(并未测试)](https://github.com/SlieFamily/nonebot-twitter)
 
 其他未列出的插件因为并未做出修改，所以您可以直接在`plugins.json`中查看
+
+## ❓常见问题
+
+### Q1：在Windows中停止机器人会报错
+
+```python
+01-17 12:57:10 [ERROR] apscheduler | Job "dy_sched (trigger: date[2023-01-17 12:57:09 CST], next run at: 2023-01-17 12:57:09 CST)" raised an exception
+Traceback (most recent call last):
+  File "bot.py", line 19, in <module>
+    nonebot.run()
+  File "D:\Users\misaka10843\Documents\GitHub\AoBot\.venv\lib\site-packages\nonebot\__init__.py", line 273, in run
+    get_driver().run(*args, **kwargs)
+  File "D:\Users\misaka10843\Documents\GitHub\AoBot\.venv\lib\site-packages\nonebot\drivers\fastapi.py", line 172, in run
+    uvicorn.run(
+  File "D:\Users\misaka10843\Documents\GitHub\AoBot\.venv\lib\site-packages\uvicorn\main.py", line 569, in run
+    server.run()
+  File "D:\Users\misaka10843\Documents\GitHub\AoBot\.venv\lib\site-packages\uvicorn\server.py", line 60, in run
+    return asyncio.run(self.serve(sockets=sockets))
+  File "d:\pl\python\python38\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "d:\pl\python\python38\lib\asyncio\base_events.py", line 603, in run_until_complete
+    self.run_forever()
+  File "d:\pl\python\python38\lib\asyncio\windows_events.py", line 316, in run_forever
+    super().run_forever()
+  File "d:\pl\python\python38\lib\asyncio\base_events.py", line 570, in run_forever
+    self._run_once()
+  File "d:\pl\python\python38\lib\asyncio\base_events.py", line 1859, in _run_once
+    handle._run()
+  File "d:\pl\python\python38\lib\asyncio\events.py", line 81, in _run
+    self._context.run(self._callback, *self._args)
+> File "D:\Users\misaka10843\Documents\GitHub\AoBot\.venv\lib\site-packages\apscheduler\executors\base_py3.py", line 30, in run_coroutine_job
+    retval = await job.func(*job.args, **job.kwargs)
+  File "D:\Users\misaka10843\Documents\GitHub\AoBot\.venv\lib\site-packages\haruka_bot\plugins\pusher\dynamic_pusher.py", line 38, in dy_sched
+    await grpc_get_user_dynamics(
+  File "D:\Users\misaka10843\Documents\GitHub\AoBot\.venv\lib\site-packages\bilireq\grpc\utils\__init__.py", line 48, in
+ wrapper
+    result = await func(
+  File "D:\Users\misaka10843\Documents\GitHub\AoBot\.venv\lib\site-packages\bilireq\grpc\dynamic\__init__.py", line 20, in grpc_get_user_dynamics
+    return await stub.DynSpace(req, **kwargs)
+  File "D:\Users\misaka10843\Documents\GitHub\AoBot\.venv\lib\site-packages\grpc\aio\_call.py", line 271, in __await__
+    response = yield from self._call_response
+asyncio.exceptions.CancelledError
+01-17 12:57:10 [INFO] uvicorn | Application shutdown complete.
+01-17 12:57:10 [INFO] uvicorn | Finished server process [1016]
+```
+
+如果是上面这种报错，均为正常情况，详细可以查看[NoneBot文档](https://v2.nonebot.dev/docs/tutorial/choose-driver#fastapi%E9%BB%98%E8%AE%A4)

@@ -139,3 +139,9 @@ dmypy.json
 .pytype/
 
 # End of https://www.toptal.com/developers/gitignore/api/python
+
+# 不允许上传data文件夹，防止数据错乱等问题
+data/
+
+# 允许上传回复的数据
+!data/word_bank/
