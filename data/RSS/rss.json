@@ -1,0 +1,36 @@
+{
+    "_default": {
+        "1": {
+            "black_keyword": "",
+            "content_to_remove": null,
+            "cookies": {},
+            "down_torrent": false,
+            "down_torrent_keyword": "",
+            "download_pic": false,
+            "duplicate_filter_mode": [],
+            "error_count": 0,
+            "etag": null,
+            "group_id": [
+                ""
+            ],
+            "guild_channel_id": [],
+            "img_proxy": false,
+            "is_open_upload_group": true,
+            "last_modified": null,
+            "max_image_number": 0,
+            "name": "mangatimekirara",
+            "only_has_pic": false,
+            "only_pic": false,
+            "only_title": false,
+            "pikpak_offline": false,
+            "pikpak_path_key": "",
+            "stop": false,
+            "time": "5",
+            "translation": false,
+            "url": "twitter/user/mangatimekirara",
+            "user_id": [
+                ""
+            ]
+        }
+    }
+}

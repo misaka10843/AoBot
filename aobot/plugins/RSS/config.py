@@ -6,8 +6,10 @@ from nonebot.config import BaseConfig
 from nonebot.log import logger
 from pydantic import AnyHttpUrl
 
-DATA_PATH = Path.cwd() / "data"
+DATA_PATH = Path.cwd() / "data/RSS"
 JSON_PATH = DATA_PATH / "rss.json"
+
+logger.success(f"RSS启动成功，配置文件存储于：{JSON_PATH}")
 
 
 class ELFConfig(BaseConfig):

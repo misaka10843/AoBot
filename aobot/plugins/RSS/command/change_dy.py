@@ -54,7 +54,8 @@ def handle_regex_property(value: str, old_value: str) -> Optional[str]:
     if not value:
         result = None
     elif value.startswith("+"):
-        result = f"{old_value}|{value.lstrip('+')}" if old_value else value.lstrip("+")
+        result = f"{old_value}|{value.lstrip('+')}" if old_value else value.lstrip(
+            "+")
     elif value.startswith("-"):
         if regex_list := old_value.split("|"):
             with suppress(ValueError):
@@ -104,7 +105,8 @@ def handle_change_list(
 ) -> None:
     if key_to_change == "name":
         tr.delete_job(rss)
-        rss.rename_file(str(DATA_PATH / f"{Rss.handle_name(value_to_change)}.json"))
+        rss.rename_file(
+            str(DATA_PATH / f"{Rss.handle_name(value_to_change)}.json"))
     elif (
         key_to_change in {"qq", "qun", "channel"}
         and not group_id
@@ -142,7 +144,8 @@ def handle_change_list(
         value_to_change = None  # type:ignore
     elif key_to_change == "img_num":
         value_to_change = int(value_to_change)  # type:ignore
-    setattr(rss, attribute_dict.get(key_to_change), value_to_change)  # type:ignore
+    setattr(rss, attribute_dict.get(key_to_change),
+            value_to_change)  # type:ignore
 
 
 prompt = """\
