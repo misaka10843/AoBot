@@ -113,6 +113,7 @@ celerybeat.pid
 .venv
 env/
 venv/
+.venv/
 ENV/
 env.bak/
 venv.bak/
@@ -142,3 +143,5 @@ dmypy.json
 
 # 不允许上传data文件夹中的一些数据，防止数据错乱等问题
 data/data.sqlite3*
+data/RSS
+!data/RSS/rss.json
