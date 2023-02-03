@@ -39,7 +39,7 @@ def get_index(path: str, body: str, token: str) -> str:
 
 
 def main():
-    token = "2707c0028c158e0e1d7302237f86f18926e2a87b658eeb9243c9c46cabc0250f"
+    token = ""
     get_manga_index(3152, token)
 
 
